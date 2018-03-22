@@ -20,7 +20,6 @@ public  class GraphFrame extends JFrame{
   public GraphPanel getGraphPanel(){
     return panel;
   }
-  public JTextField getInputBox(){
-    return inputBox;
-  }
+
+  
 }
