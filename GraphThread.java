@@ -16,7 +16,7 @@ public  class GraphThread extends Thread{
 		}
 
 		@Override
-		public void run(){
+		public void run(){//this happens repeatedly when the start function is called, dont worry about understanding this, I dont 
 			long lastTime = System.currentTimeMillis();
 			int count = 0;
 			int millCount = 0;
