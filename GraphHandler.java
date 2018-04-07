@@ -5,27 +5,26 @@ import java.awt.event.ActionEvent;
 
 public class GraphHandler{
 
-		private GraphFrame frame;
-		private GraphThread thread;
+		private GraphFrame frame;// the frame
+		private GraphThread thread;//the thread we are running this on
 
-		private ArrayList<Coordinate> coordinates;
+		private ArrayList<Coordinate> coordinates;//a list of each coordinate to graph
 
-		public GraphHandler(){
+		public GraphHandler(){//construct objects, start the thread, run the graphing function
 			frame = new GraphFrame(this);
 			((Thread)(thread = new GraphThread(this))).start();
 			coordinates = new ArrayList<Coordinate>();
 			function();
 		}
 
-		public void function(){
+		public void function(){//fills the coordinates arraylist with points based on a function
 			for(double x = -20; x<20; x+=0.5){
 				//THE ACTUAL FUNCTION!
 				double y = x*x*x+2;
 				coordinates.add(new Coordinate(x,y));
 			}
 		}
-		public void update(){
-      //the actual code that actually does stuff!
+		public void update(){//the thread will run this update function, which repaints the graphpanel
 			//Paint canvas
 			getGraphFrame().getGraphPanel().repaint();
 		}
