@@ -1,4 +1,4 @@
-public class Coordinate{
+public class Coordinate{//a very seld explanatory class
   double x;
   double y;
   public Coordinate(double x, double y){
