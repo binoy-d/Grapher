@@ -1,4 +1,6 @@
-public class Coordinate{//a very seld explanatory class
+public class Coordinate{
+  
+  //A very self-explanatory class
   double x;
   double y;
   public Coordinate(double x, double y){
@@ -14,5 +16,7 @@ public class Coordinate{//a very seld explanatory class
   }
   public double getY(){
     return this.y;
+    
   }
+  
 }
